@@ -1,47 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics | Springfield High School</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics | Signifild High School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f7fb;
+      color: #333;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: #fff;
+      padding: 20px 50px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2rem; font-weight: 800; }
+
+   
+    .navbar {
+      background: #fff;
+      padding: 12px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 25px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover, .navbar .active { color: #0066ff; }
+
+    .page-title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .page-title h2 { font-size: 2.2rem; color: #0066ff; }
+    .page-title p { color: #555; font-size: 1rem; }
+
+    .slider-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%; 
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      max-height: 700px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+   
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Springfield High School</h1>
-    </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">login</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <section class="content-section">
-            <h2>Our Curriculum</h2>
-            <p>Our academic program is designed to be rigorous and comprehensive, preparing students for success in college and beyond. We follow a curriculum that emphasizes core subjects while offering a wide range of electives.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>Programs Offered</h2>
-            <h3>Primary School (Grades 1-5)</h3>
-            <p>Focus on foundational skills in reading, writing, and mathematics.</p>
-            <h3>Middle School (Grades 6-8)</h3>
-            <p>Building on foundations with an introduction to science, social studies, and arts.</p>
-            <h3>High School (Grades 9-12)</h3>
-            <p>Specialized tracks in Science, Arts, and Commerce, with AP course options.</p>
-        </section>
+  <header>
+    <h1>Signifild High School</h1>
+  </header>
+
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="academics.html" class="active">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="page-title">
+    <h2>Our Academic Life</h2>
+    <p>Explore our classrooms, labs, and student activities</p>
+  </div>
+
+  
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Maths"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Science Lab"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Computer Lab"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" alt="Classroom"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Sports"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Library"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1596495577815-9f76db3b7f27" alt="Arts"></div>
+      <div class="slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Campus"></div>
     </div>
+  </div>
 
-    <footer class="footer">
-        <p>© 2025 Springfield High School. All Rights Reserved.</p>
-    </footer>
+  
+  <footer>
+    <p>© 2025 Signifild High School | Designed with ❤️</p>
+  </footer>
+
+  
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = slider.children;
+    let index = 0;
+
+    setInterval(() => {
+      index++;
+      if(index >= slides.length) index = 0;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000); 
+  </script>
+
 </body>
 </html>

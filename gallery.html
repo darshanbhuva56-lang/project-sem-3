@@ -1,45 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Springfield High School</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Signifild School</title>
+  <style>
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Poppins", sans-serif; background: #f4f7fb; color: #333; }
+
+   
+    .header {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: white;
+      padding: 20px 50px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    
+    .navbar {
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 25px;
+      padding: 12px 0;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover, .navbar .active { color: #0066ff; }
+
+   
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .content-section { text-align: center; margin-bottom: 40px; }
+    .content-section h2 { font-size: 2.5rem; color: #0066ff; margin-bottom: 10px; }
+    .content-section p { color: #555; font-size: 1.1rem; }
+
+   
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    
+    .fade-in { animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+   
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+   
+    @media (max-width: 600px) {
+      .gallery-item img { height: 150px; }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Springfield High School</h1>
-    </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">login</a></li>
-        </ul>
-    </nav>
+  <header class="header">🎓 Signifild School</header>
 
-    <div class="container">
-        <section class="content-section">
-            <h2>Our Campus and Events</h2>
-            <div class="gallery-grid">
-              
-                <img src="https://via.placeholder.com/300x200.png?text=Campus+View" alt="Campus View">
-                <img src="https://via.placeholder.com/300x200.png?text=Library" alt="School Library">
-                <img src="https://via.placeholder.com/300x200.png?text=Science+Lab" alt="Science Lab">
-                <img src="https://via.placeholder.com/300x200.png?text=Sports+Day" alt="Sports Day">
-                <img src="https://via.placeholder.com/300x200.png?text=Art+Class" alt="Art Class">
-                <img src="https://via.placeholder.com/300x200.png?text=Graduation" alt="Graduation Ceremony">
-            </div>
-        </section>
+  
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <section class="content-section fade-in">
+      <h2>Gallery</h2>
+      <p>Have a look at our memorable events and student activities throughout the year.</p>
+    </section>
+
+   
+    <div class="gallery fade-in">
+      <div class="gallery-item" data-title="Math Class"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Math Class"></div>
+      <div class="gallery-item" data-title="Science Lab"><img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Science Lab"></div>
+      <div class="gallery-item" data-title="Computer Lab"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Computer Lab"></div>
+      <div class="gallery-item" data-title="Classroom"><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" alt="Classroom"></div>
+      <div class="gallery-item" data-title="Students"><img src="https://images.unsplash.com/photo-1588075592446-280ebfc2d51f" alt="Students"></div>
+      <div class="gallery-item" data-title="Sports"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Sports"></div>
+      <div class="gallery-item" data-title="Library"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Library"></div>
+      <div class="gallery-item" data-title="Arts"><img src="https://images.unsplash.com/photo-1596495577815-9f76db3b7f27" alt="Arts"></div>
+      <div class="gallery-item" data-title="Campus"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Campus"></div>
+      <div class="gallery-item" data-title="Graduation"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="Graduation"></div>
     </div>
+  </div>
 
-    <footer class="footer">
-        <p>© 2025 Springfield High School. All Rights Reserved.</p>
-    </footer>
+
+  <footer class="footer">© 2025 Signifild School | Designed with ❤️</footer>
 </body>
 </html>

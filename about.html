@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Signifild School</title>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+  
+    .header {
+      background: linear-gradient(135deg, #3a7bd5, #3a6073);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      animation: fadeSlide 1.5s ease-in-out;
+    }
+
+    .navbar {
+      background: #222;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .navbar ul li {
+      margin: 0 15px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+    }
+    .navbar ul li a::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 0;
+      background: #3a7bd5;
+      transition: 0.3s;
+      margin: auto;
+    }
+    .navbar ul li a:hover::after,
+    .navbar ul li a.active::after {
+      width: 100%;
+    }
+
+   
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content-section {
+      background: #fff;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+    .content-section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .content-section h2 {
+      margin-bottom: 15px;
+      color: #3a7bd5;
+    }
+    .content-section p {
+      margin-bottom: 10px;
+    }
+
+    
+    .footer {
+      background: #3a6073;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    🎓 Signifild School
+  </header>
+
+  
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <div class="container">
+    <section class="content-section fade-in">
+      <h2>Our History</h2>
+      <p>Founded in 1950, Signifild School has a long-standing tradition of academic excellence and community service. For over 70 years, we have been committed to providing top-quality education to students across the region.</p>
+    </section>
+    
+    <section class="content-section fade-in">
+      <h2>Mission & Vision</h2>
+      <p><strong>Mission:</strong> To empower students with the knowledge, skills, and values needed to thrive in a dynamic world. We foster critical thinking, creativity, and a passion for lifelong learning.</p>
+      <p><strong>Vision:</strong> To be a leading educational institution recognized for our innovative approach to education and our commitment to student success.</p>
+    </section>
+
+    <section class="content-section fade-in">
+      <h2>Why Choose Us?</h2>
+      <p>✨ Experienced Faculty with Global Exposure</p>
+      <p>✨ Modern Classrooms with Smart Technology</p>
+      <p>✨ Focus on Academic + Co-curricular Balance</p>
+      <p>✨ Strong Alumni Network & Career Support</p>
+    </section>
+  </div>
+
+  
+  <footer class="footer">
+    <p>© 2025 Signifild School | Designed with ❤️</p>
+  </footer>
+
+  
+  <script>
+    const sections = document.querySelectorAll(".content-section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

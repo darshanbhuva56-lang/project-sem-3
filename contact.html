@@ -1,55 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Springfield High School</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Signifild School</title>
+  <style>
+   
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Poppins", sans-serif; background: #f0f4f8; color: #333; }
+
+   
+    .header {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: white;
+      padding: 25px 50px;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+   
+    .navbar {
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 25px;
+      padding: 14px 0;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar a:hover, .navbar .active { 
+      color: #0066ff;
+      transform: scale(1.1);
+    }
+
+  
+    .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+
+    .content-section {
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .content-section h2 {
+      font-size: 2.5rem;
+      color: #0066ff;
+      margin-bottom: 20px;
+    }
+    .content-section p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+    .content-section p:hover { color: #0066ff; }
+
+   
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+
+    .contact-card {
+      background: linear-gradient(135deg, #00c6ff, #0066ff);
+      color: white;
+      padding: 20px 25px;
+      margin: 15px auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      max-width: 400px;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .contact-card p { margin: 0; font-size: 1.2rem; }
+
+   
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 1rem;
+    }
+
+   
+    @media (max-width: 600px) {
+      .content-section { padding: 25px 15px; }
+      .content-section h2 { font-size: 2rem; }
+      .contact-card { max-width: 90%; }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Springfield High School</h1>
-    </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">login</a></li>
-        </ul>
-    </nav>
+ 
+  <header class="header">🎓 Signifild School</header>
 
-    <div class="container">
-        <section class="content-section">
-            <h2>Get In Touch</h2>
-            <p>We'd love to hear from you. Please feel free to reach out with any questions.</p>
-            <ul>
-                <li><strong>Address:</strong>a-34,gajanan society,yogi-chok,puna-gaam,surat </li>
-                <li><strong>Phone:</strong>9974343937 </li>
-                <li><strong>Email:</strong>bhuvajenil@gmail.com </li>
-            </ul>
-        </section>
+ 
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
 
-        <section class="content-section">
-            <h2>Our Location</h2>
-            
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.225576149177!2d-122.42172048468138!3d37.78825147975767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1e45935b%3A0x4f7f13a0d5c03c8!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1616161616161" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </section>
-    </div>
+  
+  <div class="container">
+    <section class="content-section">
+      <h2>Contact Us</h2>
 
-    <footer class="footer">
-        <p> 2025 Springfield High School. All Rights Reserved.</p>
-    </footer>
+      <div class="contact-card">
+        <p>📧 Email: info@signifildschool.com</p>
+      </div>
+
+      <div class="contact-card">
+        <p>📞 Phone: +91 9876543210</p>
+      </div>
+
+      <div class="contact-card">
+  <p>🏫 Address:</p>
+  <p>Signifild School</p>
+  <p>Near City Park, Green Avenue</p>
+  <p>Your City, State, India - 123456</p>
+  <a href="https://www.google.com/maps/place/Near+City+Park,+Green+Avenue,+Your+City" target="_blank" style="color: #fff; text-decoration: underline;">View on Google Maps</a>
+</div>
+
+    </section>
+  </div>
+
+  
+  <footer class="footer">© 2025 Signifild School | Designed with ❤️</footer>
 </body>
 </html>

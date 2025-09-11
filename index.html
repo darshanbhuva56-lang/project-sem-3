@@ -1,60 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions | Springfield High School</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signifild High School | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f7fb;
+      color: #333;
+    }
 
-<body>
-    <header class="header">
-        <h1>Springfield High School</h1>
-    </header>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">login</a></li>
-        </ul>
-    </nav>
- 
-    <div class="slider-container">
-        <div class="slider">
-           
-            <input type="radio" name="slide-radio" id="slide1" checked>
-            <input type="radio" name="slide-radio" id="slide2">
-            <input type="radio" name="slide-radio" id="slide3">
-            <input type="radio" name="slide-radio" id="slide4">
-
-            
-            <div class="slide first">
-                <img src="https://media.gettyimages.com/id/72991503/photo/group-of-friends-studying-outdoors.jpg?s=612x612&w=0&k=20&c=1pA883KTL7AgaqusG_pFcoQxm6RntODlUElbq3X-lko="
-                    alt="School Campus">
-            </div>
-            <div class="slide">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZOozQp5QoLgy0POKaYZdehIe36OefTsV2Yg&s"
-                    alt="Library">
-            </div>
-            <div class="slide">
-                <img src= ""alt="Sports Day">
-            </div>
-            <div class="slide">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShagWTGSKWVy0w6keNRjQWJHY1XlZQob3g_w&s"
-                    alt="Classroom">
-            </div>
-        </div>
+   
+    header {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: #fff;
+      padding: 20px 50px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
 
     
-        <div class="slider-nav">
-            <label for="slide1" class="nav-dot" id="dot1"></label>
-            <label for="slide2" class="nav-dot" id="dot2"></label>
-            <label for="slide3" class="nav-dot" id="dot3"></label>
-            <label for="slide4" class="nav-dot" id="dot4"></label>
-        </div>
+    .navbar {
+      background: #fff;
+      padding: 12px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 25px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover, .navbar .active {
+      color: #0066ff;
+    }
+
+   
+    .hero {
+      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") no-repeat center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero-content a {
+      padding: 12px 25px;
+      background: #00c6ff;
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .hero-content a:hover {
+      background: #0066ff;
+    }
+
+   
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px;
+      text-align: center;
+    }
+    .highlight-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+    .highlight-card:hover {
+      transform: translateY(-10px);
+    }
+    .highlight-card h3 {
+      margin-bottom: 10px;
+      color: #0066ff;
+    }
+
+   
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Signifild High School</h1>
+  </header>
+
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Signifild High School</h2>
+      <p>Shaping young minds for a brighter tomorrow</p>
+      <a href="admissions.html">Explore More</a>
     </div>
+  </section>
+
+ 
+  <section class="highlights">
+    <div class="highlight-card">
+      <h3>Academics</h3>
+      <p>Providing top-notch education with modern teaching methods.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Sports</h3>
+      <p>Encouraging fitness and teamwork through various sports.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Facilities</h3>
+      <p>State-of-the-art classrooms, labs, and libraries.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Activities</h3>
+      <p>Boosting creativity with arts, music, and cultural events.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Signifild High School | Designed with ❤️</p>
+  </footer>
+</body>
+</html>
