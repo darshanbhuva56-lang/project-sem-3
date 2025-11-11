@@ -7,7 +7,7 @@ echo "✅ Database connected successfully<br><br>";
 
 
 if (isset($_POST['btn'])) {
-    // Collect form data safely
+    
     $sname = $_POST['sname'];
     $lstd = $_POST['lstd'];
     $ustd = $_POST['ustd'];

@@ -1,202 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions | Springfield High School</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions | Signifild High School</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      color: #333;
+    }
 
-        .header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    .header {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-        .navbar {
-            background-color: #00509e;
-            padding: 10px 0;
-        }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 12px 0;
+      gap: 25px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #0066ff;
+    }
 
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
 
-        .navbar ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
+    .content-section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #0066ff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    p {
+      line-height: 1.6;
+      text-align: center;
+    }
 
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .inquiry-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f9fbff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-        .navbar ul li a:hover {
-            text-decoration: underline;
-        }
+    .form-group {
+      margin-bottom: 18px;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
 
-        .content-section {
-            margin-bottom: 40px;
-        }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
 
-        h2 {
-            color: #003366;
-            margin-bottom: 15px;
-        }
+    input:focus,
+    textarea:focus {
+      border-color: #0066ff;
+      outline: none;
+      box-shadow: 0 0 8px rgba(0,102,255,0.3);
+    }
 
-        ol {
-            padding-left: 20px;
-        }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
 
-        p {
-            line-height: 1.6;
-        }
+    .btn {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
 
-        .inquiry-form {
-            max-width: 500px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    .btn:hover {
+      background: linear-gradient(135deg, #004fc7, #0095ff);
+    }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+  
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .btn {
-            background-color: #003366;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0055a5;
-        }
-
-        .footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
+    @media (max-width: 600px) {
+      .navbar ul {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header">
-        <h1>Springfield High School</h1>
-    </header>
+  <header class="header">
+    Signifild High School – Admissions
+  </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="update.html">Update</a></li>
-            <li><a href="delete.html">Delete</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="admissions.html" class="active">Admissions</a></li>
+      <li><a href="update.html">Update</a></li>
+      <li><a href="delete.html">Delete</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
 
-    <div class="container">
-        <section class="content-section">
-            <h2>Admission Process</h2>
-            <ol>
-                <li>Submit the online inquiry form.</li>
-                <li>Schedule a campus tour and interview.</li>
-                <li>Complete the application packet.</li>
-                <li>Receive admission decision.</li>
-            </ol>
-            <p><strong>Important Dates:</strong> Applications for the 2026-2027 school year open on October 1, 2025.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>Inquiry Form</h2>
-            <form action="add.php" method="POST" class="inquiry-form"> 
-                <div class="form-group">
-                    <label for="student name">student name</label>
-                    <input type="text" id="sname" name="sname" placeholder="enter student name" required>
+  <div class="container">
+    <section class="content-section">
+      <h2>Admission Process</h2>
+      <ol>
+        <li>Submit the online inquiry form below.</li>
+        <li>Schedule a campus tour and interview.</li>
+        <li>Complete the application packet.</li>
+        <li>Receive admission decision.</li>
+      </ol>
+      <p><strong>Important Date:</strong> Applications for the 2026–2027 session open on <b>October 1, 2025</b>.</p>
+    </section>
+    
+    <section class="content-section">
+      <h2>Inquiry Form</h2>
+      <form action="add.php" method="POST" class="inquiry-form"> 
+        <div class="form-group">
+          <label for="sname">Student Name</label>
+          <input type="text" id="sname" name="sname" placeholder="Enter student name" required>
+        </div>
+        <div class="form-group">
+          <label for="std">Standard</label>
+          <input type="number" id="std" name="std" placeholder="Enter standard" required>
+        </div>
+        <div class="form-group">
+          <label for="pname">Parent's Name</label>
+          <input type="text" id="pname" name="name" placeholder="Enter parent's name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="number" id="contact" name="contact" placeholder="Enter contact number" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label for="messege">Message</label>
+          <textarea id="messege" name="messege" placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit" name="submit" class="btn">Submit Inquiry</button>
+      </form>
+    </section>
+  </div>
 
-                </div>
-                <div class="form-group">
-                    <label for="std">std</label>
-                    <input type="number" id="std" name="std" placeholder="std" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">Parent's Name:</label>
-                    <input type="text" id="name" name="name" placeholder="enter parent's name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contactNo">contactNo</label>
-                    <input type="number" id="contact" name="contact" placeholder="enter contact number" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <input type="text" id="messege" name="messege" placeholder="your messege">
-                </div>
-                <input type="submit" id="submit" name="submit" value="submit">
-            </form>
-        </section>
-    </div>
+  <footer class="footer">
+    © 2025 Signifild High School | Designed with ❤️
+  </footer>
 
-    <footer class="footer">
-        <p>© 2025 Springfield High School. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
